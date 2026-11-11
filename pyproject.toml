@@ -1,0 +1,23 @@
+[project]
+name = "jd-resume-matchscore"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "yashsingh1904", email = "singhyash9990@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=1.7.0",
+    "pydantic>=2.14.3",
+    "pypdf>=7.0.1",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+jd-resume-matchscore = "jd_resume_matchscore:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
