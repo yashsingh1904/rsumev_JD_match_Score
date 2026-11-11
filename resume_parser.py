@@ -5,7 +5,7 @@ from pathlib import Path
 from pydantic import BaseModel
 import json
 import time
-load_dotenv()
+load_dotenv(Path(__file__).parent / ".env")
 api_key = os.getenv('GROQ_API_KEY')
 
 if not api_key:
@@ -273,7 +273,7 @@ def read_resume(file_path):
 
 
 # lets do it now
-resume_folder = Path("resumes")
+resume_folder = Path(__file__).parent / "resumes"
 all_results=[]
 for file_path in resume_folder.iterdir():
     #C:\Users\Pratyush\padho_with_pratyush\week1\day5\resumes\abhay resume new - Abhay Singh.pdf
